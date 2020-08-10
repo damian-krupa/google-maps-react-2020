@@ -93,13 +93,13 @@ const App = () => {
             }}
           />
         ))}
-
         {selected ? (
           <InfoWindow
             position={{ lat: selected.lat, lng: selected.lng }}
             onCloseClick={() => {
               setSelected(null);
             }}
+            options={{pixelOffset: new window.google.maps.Size(0, -30)}}
           >
             <div>
               <h2>
